@@ -1,4 +1,4 @@
-﻿using CKK.DB.Interfaces;
+﻿﻿using CKK.DB.Interfaces;
 using CKK.Logic.Models;
 using Dapper;
 using System;
@@ -15,7 +15,7 @@ namespace CKK.DB.Repository {
             _connectionFactory = Conn;
         }
         public int Add(ShoppingCartItem entity) {
-            string sql = "INSERT INTO ShoppingCartItems (ShoppingCartId,ProductId,Quantity) VALUES (ShoppingCartId = @ShoppingCartId, ProductId = @ProductId, Quantity = @Quantity)";
+            string sql = "INSERT INTO ShoppingCartItems (ShoppingCartId,ProductId,Quantity) VALUES (@ShoppingCartId, @ProductId, @Quantity)";
             using( IDbConnection connection = _connectionFactory.GetConnection ) {
                 connection.Open();
                 var result = connection.Execute(sql, entity);
@@ -65,7 +65,11 @@ namespace CKK.DB.Repository {
         }
 
         public decimal GetTotal(int shoppingCartId) {
-            string sql = "SELECT SUM(Quantity) FROM ShoppingCartItems WHERE ShoppingCartId = @ShoppingCartId";
+            string sql = @"
+        SELECT ISNULL(SUM(sci.Quantity * p.Price), 0)
+        FROM ShoppingCartItems AS sci
+        INNER JOIN Products AS p ON sci.ProductId = p.Id
+        WHERE sci.ShoppingCartId = @ShoppingCartId";
             using( IDbConnection connection = _connectionFactory.GetConnection ) {
                 connection.Open();
                 var result = connection.QuerySingleOrDefault<decimal>(sql, new { ShoppingCartId = shoppingCartId });

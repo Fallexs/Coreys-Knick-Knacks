@@ -6,5 +6,5 @@ namespace CKK.DB.Interfaces {
 		int Add(T entity);
 		int Update(T entity);
 		int Delete(T entity);
-	}
+    }
 }

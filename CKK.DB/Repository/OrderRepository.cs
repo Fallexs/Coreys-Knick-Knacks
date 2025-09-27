@@ -1,4 +1,4 @@
-﻿using CKK.DB.Interfaces;
+﻿﻿using CKK.DB.Interfaces;
 using CKK.Logic.Models;
 using Dapper;
 using System;
@@ -15,7 +15,7 @@ namespace CKK.DB.Repository {
             _connectionFactory = Conn;
         }
         public int Add(Order entity) {
-            string sql = "INSERT INTO Orders (OrderNumber, CustomerId, ShoppingCartId) VALUES (OrderNumber = @OrderNumber, CustomerId = @CustomerId, ShoppingCartId = @ShoppingCartId)";
+            string sql = "INSERT INTO Orders (OrderId, OrderNumber, CustomerId, ShoppingCartId) VALUES (@OrderId, @OrderNumber, @CustomerId, @ShoppingCartId)";
             using( IDbConnection connection = _connectionFactory.GetConnection ) {
                 connection.Open();
                 var result = connection.Execute(sql, entity);
@@ -23,18 +23,30 @@ namespace CKK.DB.Repository {
             }
         }
 
-        public int Delete(Order entity) {
+        public int Delete(Order entity)
+        {
+            string sql = "DELETE FROM Orders WHERE OrderId = @OrderId";
+            using (IDbConnection connection = _connectionFactory.GetConnection)
+            {
+                connection.Open();
+                var result = connection.Execute(sql, entity);
+                return result;
+            }
+        }
+            public int Delete(int id) {
             string sql = "DELETE FROM Orders WHERE OrderId = @OrderId";
             using( IDbConnection connection = _connectionFactory.GetConnection ) {
                 connection.Open();
-                var result = connection.Execute(sql, entity);
+                var result = connection.Execute(sql, new { OrderId = id });
                 return result;
             }
         }
 
-        public List<Order> GetAll() {
+        public List<Order> GetAll()
+        {
             string sql = "SELECT * FROM Orders";
-            using( IDbConnection connection = _connectionFactory.GetConnection ) {
+            using (IDbConnection connection = _connectionFactory.GetConnection)
+            {
                 connection.Open();
                 var result = connection.Query<Order>(sql).ToList();
                 return result;
