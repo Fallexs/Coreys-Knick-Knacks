@@ -8,5 +8,14 @@ namespace CKK.Logic.Models {
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
+
+        public override string ToString() {
+            return string.Format(
+            "{0,-20} {1,0:C} {2,20}",
+            "Item: " + Name,
+            Price,
+            "Amount: " + Quantity
+            );
+        }
     }
 }

@@ -85,11 +85,20 @@ namespace CKK.DB.Repository {
         }
 
         public int Update(ShoppingCartItem entity) {
-            string sql = "UPDATE ShoppingCartItems SET Id = @Id, ShoppingCartId = @ShoppingCartId, ProductId = @ProductId, Quantity = @Quantity WHERE Id = @Id";
             using( IDbConnection connection = _connectionFactory.GetConnection ) {
                 connection.Open();
-                var result = connection.Execute(sql, entity);
-                return result;
+                if( entity.Quantity <= 0 ) {
+                    string deleteSql = @"DELETE FROM ShoppingCartItems 
+                                 WHERE ShoppingCartId = @ShoppingCartId 
+                                   AND ProductId = @ProductId";
+                    return connection.Execute(deleteSql, entity);
+                } else {
+                    string updateSql = @"UPDATE ShoppingCartItems 
+                                 SET Quantity = @Quantity 
+                                 WHERE ShoppingCartId = @ShoppingCartId 
+                                   AND ProductId = @ProductId";
+                    return connection.Execute(updateSql, entity);
+                }
             }
         }
     }

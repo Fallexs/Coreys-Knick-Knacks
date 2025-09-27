@@ -12,15 +12,15 @@
 else
 {
     <div class="text-center">
-       <h1 class="display-4">Shopping Cart!</h1>
+       <h1 class="display-4">Check us out!</h1>
     </div>
         <form method="get">
         <input type="hidden" value="@order.OrderId" />
-        <p>The number selectors will add your items to the shopping cart.</p>
-        <div class="row">
+        <p class="text-center display-4 fs-3">Enter how many items you would like to purchase from our list of products here!</p>
+        <div class="row justify-content-center p-4">
             @foreach (var item in uow.Products.GetAll())
             {
-                <div class="card" style="width: 18rem; padding: 5px;">
+                <div class="card border-3 border-dark border-rounded" style="width: 18rem; padding: 5px;">
                     <div class="card-body">
                         <h5 class="card-title text-center">@item.Name</h5>
                         <p class="card-text">@item.Price.ToString("c")</p>
@@ -33,9 +33,12 @@ else
                 </div>
             }
         </div>
-        <p>The CheckOut button removes inventory based on your shopping cart and deletes your order and shopping card.</p>
+        <p class="text-center display-4 fs-2">Try adding an item to your cart and see what your total will be here!</p>
     </form>
-    <a id="CheckoutBtn"  @onclick="CheckOut" class="btn btn-success btn-lg btn-block">@checkoutTotal</a>
+    <div class="text-center">
+    <button id="CheckoutBtn" @onclick="CheckOut" class="btn btn-success btn-lg btn-block align-items-center">@checkoutTotal</button>
+
+    </div>
 }
 
 @code {
@@ -56,6 +59,7 @@ else
             }
 
             UpdateTotal();
+            uow.ShoppingCarts.ClearCart(order.ShoppingCartId);
         }
     }
 

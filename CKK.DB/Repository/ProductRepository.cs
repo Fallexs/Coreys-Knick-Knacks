@@ -15,15 +15,13 @@ namespace CKK.DB.Repository {
             _connectionFactory = Conn;
         }
         public int Add(Product entity) {
-            string sql = "INSERT INTO Products (Id, Name, Price, Quantity) VALUES (@Id, @Name, @Price, @Quantity)";
+            string sql = "INSERT INTO Products (Name, Price, Quantity) VALUES (@Name, @Price, @Quantity)";
             using( var connection = _connectionFactory.GetConnection ) {
                 connection.Open();
                 var result = connection.Execute(sql, entity);
                 return result;
             }
         }
-
-
         public int Delete(Product entity)
         {
             string sql = "DELETE FROM Products WHERE Id = @Id";
