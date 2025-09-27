@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CKK.Logic.Models;
 
 namespace CKK.DB.Interfaces {
-    internal interface IShoppingCartRepository {
+    public interface IShoppingCartRepository {
         ShoppingCartItem AddToCart(int ShoppingCartId, int ProductId, int Quantity);
         int ClearCart(int ShoppingCartId);
         decimal GetTotal(int ShoppingCartId);

@@ -1,4 +1,4 @@
-﻿using CKK.Logic.Exceptions;
+﻿/*using CKK.Logic.Exceptions;
 using CKK.Logic.Interfaces;
 using CKK.Logic.Models;
 using CKK.Persistance.Interfaces;
@@ -125,3 +125,4 @@ namespace CKK.Persistance.Models {
 
     }
 }
+*/

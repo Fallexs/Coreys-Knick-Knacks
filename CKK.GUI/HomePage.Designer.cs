@@ -46,8 +46,8 @@
             // 
             // logoutButton
             // 
-            logoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            logoutButton.BackColor = System.Drawing.Color.FromArgb(255, 134, 157);
+            logoutButton.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            logoutButton.BackColor = System.Drawing.Color.FromArgb(      255,       134,       157);
             logoutButton.FlatAppearance.BorderSize = 0;
             logoutButton.Font = new System.Drawing.Font("Helvetica", 12F);
             logoutButton.ForeColor = System.Drawing.Color.White;
@@ -62,7 +62,7 @@
             // 
             // topPanel
             // 
-            topPanel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            topPanel.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             topPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             topPanel.Controls.Add(label44);
             topPanel.Controls.Add(greetMessage);
@@ -86,7 +86,7 @@
             // 
             // greetMessage
             // 
-            greetMessage.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            greetMessage.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             greetMessage.Font = new System.Drawing.Font("Helvetica", 12F);
             greetMessage.ForeColor = System.Drawing.Color.White;
             greetMessage.Location = new System.Drawing.Point(660, 36);
@@ -98,9 +98,9 @@
             // 
             // settingButton
             // 
-            settingButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            settingButton.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             settingButton.BackColor = System.Drawing.Color.Transparent;
-            settingButton.BackgroundImage = (System.Drawing.Image)resources.GetObject("settingButton.BackgroundImage");
+            settingButton.BackgroundImage = ( System.Drawing.Image ) resources.GetObject("settingButton.BackgroundImage");
             settingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             settingButton.FlatAppearance.BorderSize = 0;
             settingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,7 +113,7 @@
             // productLabel
             // 
             productLabel.AutoSize = true;
-            productLabel.Font = new System.Drawing.Font("Helvetica", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            productLabel.Font = new System.Drawing.Font("Helvetica", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,    0);
             productLabel.ForeColor = System.Drawing.Color.White;
             productLabel.Location = new System.Drawing.Point(40, 24);
             productLabel.Name = "productLabel";
@@ -123,7 +123,7 @@
             // 
             // addProduct
             // 
-            addProduct.BackColor = System.Drawing.Color.FromArgb(48, 147, 69);
+            addProduct.BackColor = System.Drawing.Color.FromArgb(      48,       147,       69);
             addProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             addProduct.Font = new System.Drawing.Font("Helvetica", 10F);
             addProduct.ForeColor = System.Drawing.Color.White;
@@ -139,8 +139,8 @@
             // 
             productNameSearch.AcceptsReturn = true;
             productNameSearch.AcceptsTab = true;
-            productNameSearch.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            productNameSearch.BackColor = System.Drawing.Color.FromArgb(23, 24, 25);
+            productNameSearch.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            productNameSearch.BackColor = System.Drawing.Color.FromArgb(      23,       24,       25);
             productNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             productNameSearch.Font = new System.Drawing.Font("Helvetica", 20F);
             productNameSearch.ForeColor = System.Drawing.SystemColors.Window;
@@ -152,7 +152,7 @@
             // 
             // productNameSearchLabel
             // 
-            productNameSearchLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            productNameSearchLabel.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             productNameSearchLabel.AutoSize = true;
             productNameSearchLabel.Font = new System.Drawing.Font("Helvetica", 12F);
             productNameSearchLabel.ForeColor = System.Drawing.Color.White;
@@ -164,7 +164,7 @@
             // 
             // searchPanel
             // 
-            searchPanel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            searchPanel.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             searchPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             searchPanel.Controls.Add(priceRadioBtn);
             searchPanel.Controls.Add(quantityRadioBtn);
@@ -182,7 +182,7 @@
             // 
             // priceRadioBtn
             // 
-            priceRadioBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            priceRadioBtn.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             priceRadioBtn.AutoSize = true;
             priceRadioBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
             priceRadioBtn.ForeColor = System.Drawing.Color.Plum;
@@ -196,7 +196,7 @@
             // 
             // quantityRadioBtn
             // 
-            quantityRadioBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            quantityRadioBtn.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             quantityRadioBtn.AutoSize = true;
             quantityRadioBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
             quantityRadioBtn.ForeColor = System.Drawing.Color.Plum;
@@ -210,7 +210,7 @@
             // 
             // noneRadioBtn
             // 
-            noneRadioBtn.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            noneRadioBtn.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             noneRadioBtn.AutoSize = true;
             noneRadioBtn.Checked = true;
             noneRadioBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -226,7 +226,7 @@
             // 
             // deleteBtn
             // 
-            deleteBtn.BackColor = System.Drawing.Color.FromArgb(255, 134, 157);
+            deleteBtn.BackColor = System.Drawing.Color.FromArgb(      255,       134,       157);
             deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             deleteBtn.Font = new System.Drawing.Font("Helvetica", 10F);
             deleteBtn.ForeColor = System.Drawing.Color.White;
@@ -240,7 +240,7 @@
             // 
             // sortLabel
             // 
-            sortLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            sortLabel.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             sortLabel.AutoSize = true;
             sortLabel.Font = new System.Drawing.Font("Helvetica", 12F);
             sortLabel.ForeColor = System.Drawing.Color.White;
@@ -252,23 +252,22 @@
             // 
             // inventoryList
             // 
-            inventoryList.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            inventoryList.BackColor = System.Drawing.Color.FromArgb(23, 24, 25);
-            inventoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            inventoryList.Anchor =    System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            inventoryList.BackColor = System.Drawing.Color.FromArgb(      23,       24,       25);
             inventoryList.Font = new System.Drawing.Font("Helvetica", 30F);
             inventoryList.ForeColor = System.Drawing.Color.White;
             inventoryList.FormattingEnabled = true;
             inventoryList.ItemHeight = 47;
             inventoryList.Location = new System.Drawing.Point(12, 206);
             inventoryList.Name = "inventoryList";
-            inventoryList.Size = new System.Drawing.Size(1240, 470);
-            inventoryList.TabIndex = 22;
+            inventoryList.Size = new System.Drawing.Size(1240, 474);
+            inventoryList.TabIndex = 25;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.FromArgb(18, 18, 18);
+            BackColor = System.Drawing.Color.FromArgb(      18,       18,       18);
             ClientSize = new System.Drawing.Size(1264, 681);
             Controls.Add(inventoryList);
             Controls.Add(searchPanel);
@@ -303,11 +302,11 @@
         private System.Windows.Forms.Label productNameSearchLabel;
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ListBox inventoryList;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label sortLabel;
         private System.Windows.Forms.RadioButton noneRadioBtn;
         private System.Windows.Forms.RadioButton priceRadioBtn;
         private System.Windows.Forms.RadioButton quantityRadioBtn;
+        private System.Windows.Forms.ListBox inventoryList;
     }
 }

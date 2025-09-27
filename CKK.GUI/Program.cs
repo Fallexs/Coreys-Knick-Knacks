@@ -1,5 +1,5 @@
-﻿using CKK.Logic.Models;
-using CKK.Persistance.Models;
+﻿using CKK.DB.UOW;
+using CKK.Logic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +13,8 @@ namespace Login_Page {
         /// </summary>
         [STAThread]
         static void Main() {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            var Store = new FileStore();
-            using (var login = new LoginPage()) {
-                if (login.ShowDialog() == DialogResult.OK) {
-                    Application.Run(new HomePage(Store));
-                }
-            }
+            LoginPage loginPage = new LoginPage();
+            Application.Run(loginPage);
         }
     }
 }
